@@ -10,8 +10,8 @@
 void display_complex_number(complex c)
 {
 /* print real part */
-	if (c.re != 0)
-		printf("%g", c.re);
+/*	if (c.re != 0) */
+	printf("%g", c.re);
 
 /* print sign */
 	if (c.im > 0)
