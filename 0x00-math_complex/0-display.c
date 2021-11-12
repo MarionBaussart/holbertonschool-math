@@ -25,7 +25,7 @@ void display_complex_number(complex c)
 /* print imaginary */
 	if (c.im != 1 && c.im != -1 && c.im != 0)
 		printf("%gi", c.im);
-	else if (c.im == 1 && c.im == -1)
+	else if (c.im == 1 || c.im == -1)
 		printf("i");
 
 	printf("\n");
