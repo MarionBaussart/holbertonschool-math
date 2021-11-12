@@ -13,6 +13,10 @@ typedef struct complex
 	double im;
 } complex;
 
+complex conjugate(complex c);
+
 void display_complex_number(complex c);
+double modulus(complex c);
+double argument(complex c);
 
 #endif

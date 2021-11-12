@@ -9,37 +9,21 @@
 
 void display_complex_number(complex c)
 {
-	if (c.re != 0 || c.im != 0)
-	{
-		if (c.im == 1)
-		{
-			if (c.re != 0)
-				printf("%.f + i\n", c.re);
-			else
-				printf("i\n");
-		}
-		else if (c.im == -1)
-		{
-			if (c.re != 0)
-				printf("%.f - i\n", c.re);
-			else
-				printf("- i\n");
-		}
-		else if (c.im > 0)
-		{
-			if (c.re != 0)
-				printf("%.f + %.fi\n", c.re, c.im);
-			else
-				printf("%.fi\n", c.im);
-		}
-		else if (c.im < 0)
-		{
-			if (c.re != 0)
-				printf("%.f - %.fi\n", c.re, (-1) * c.im);
-			else
-				printf("- %.fi\n", (-1) * c.im);
-		}
-		else if (c.im == 0)
-			printf("%.f\n", c.re);
-	}
+/* print real part */
+	if (c.re != 0)
+		printf("%g", c.re);
+
+/* print sign */
+	if (c.im > 0)
+		printf(" + ");
+	else if (c.im < 0)
+		printf(" - ");
+
+/* print imaginary */
+	if (c.im != 1 && c.im != -1 && c.im != 0)
+		printf("%gi", c.im);
+	else if (c.im == 1 && c.im == -1)
+		printf("i");
+
+	printf("\n");
 }
