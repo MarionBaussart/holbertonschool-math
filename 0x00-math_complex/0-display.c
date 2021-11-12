@@ -17,7 +17,10 @@ void display_complex_number(complex c)
 	if (c.im > 0)
 		printf(" + ");
 	else if (c.im < 0)
+	{
 		printf(" - ");
+		c.im = c.im * (-1);
+	}
 
 /* print imaginary */
 	if (c.im != 1 && c.im != -1 && c.im != 0)
