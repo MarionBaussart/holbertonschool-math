@@ -17,5 +17,5 @@ void division(complex c1, complex c2, complex *c3)
 	double a = pow(c2.re, exp), b = pow(c2.im, exp);
 
 	c3->re = ((c1.re * c2.re) + (c1.im * c2.im)) / (a + b);
-	c3->im = ((c1.re * c2.im) - (c1.im * c2.re)) / (a + b);
+	c3->im = -((c1.re * c2.im) - (c1.im * c2.re)) / (a + b);
 }
