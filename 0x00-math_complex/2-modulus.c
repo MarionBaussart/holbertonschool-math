@@ -4,6 +4,7 @@
 
 /**
  * modulus - returns the modulus of a given complex number
+ * for gcc, include at the end -lm for the libraries
  * @c: complex number to print
  * Return: modulus
  */
