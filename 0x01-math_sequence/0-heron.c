@@ -14,7 +14,7 @@ t_cell *heron(double p, double x0)
 	double u = x0;
 
 	heron_suite = add_nodeint(&heron_suite, x0);
-	while (fabs(u - sqrt(p)) >= pow(10, -7))
+	while (fabs((u * u) - p) >= pow(10, -7))
 	{
 		u = 0.5 * (u + (p / u));
 		heron_suite = add_nodeint(&heron_suite, u);
