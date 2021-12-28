@@ -11,15 +11,13 @@
 t_cell *heron(double p, double x0)
 {
 	t_cell *heron_suite = NULL;
-	double u;
+	double u = x0;
 
 	heron_suite = add_nodeint(&heron_suite, x0);
-	u = 0.5 * (x0 + (p / x0));
-	while (fabs(u - x0) >= pow(10, -7))
+	while (fabs(u - sqrt(p)) >= pow(10, -7))
 	{
-		heron_suite = add_nodeint(&heron_suite, u);
-		x0 = u;
 		u = 0.5 * (u + (p / u));
+		heron_suite = add_nodeint(&heron_suite, u);
 	}
 	return (heron_suite);
 }
