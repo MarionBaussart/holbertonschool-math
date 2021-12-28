@@ -1,5 +1,7 @@
 #include "heron.h"
 
+t_cell *add_nodeint(t_cell **head, double n);
+
 /**
  * heron - function that return the Heron sequence until having
  * convergence with an error less or equal to 10^-7
